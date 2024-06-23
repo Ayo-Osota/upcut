@@ -1,6 +1,4 @@
 import './style.css'
-import typescriptLogo from './typescript.svg'
-import viteLogo from '/vite.svg'
 import { navbar } from './components/navbar.ts';
 import { navigationLinks } from './data.ts';
 import { footer } from './components/footer.ts';
