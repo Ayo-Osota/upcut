@@ -1,3 +1,4 @@
+import { upcutContactInfo } from "../data";
 import { IconCall, IconCircleArrow, IconInstagram, IconLinkedIn, IconX } from "../icons";
 
 
@@ -19,29 +20,31 @@ export function footer() {
 
     <article class="max-md:mt-10">
     <p class="text-3xl md:text-displayMedium max-w-[21ch]">
-   12, CAC okeisegun street
-   Samuel sule, Eleyele
-   Ibadan
+  
     </p>
 
 
-    <a href="tel:+2348011111111" class="mt-10 inline-flex items-center gap-2.5">
+    <a href="tel:${upcutContactInfo.phone}" class="mt-10 inline-flex items-center gap-2.5">
     <span class="bg-primary-500 text-base md:text-2xl w-6 md:w-11 aspect-square rounded-full flex items-center justify-center">
      ${IconCall}
      </span>
      <span class="text-base md:text-headlineLarge">
-    +2348011111111
+    ${upcutContactInfo.phone}
     </span>
     </a>
-    <a href="mailto:osotaayomikun@gmail.com" class="mt-10 md:mt-16 block text-xl md:text-displaySmall font-bold">
-    Hello@Upcut.com
+    <a 
+    title="email address" 
+    aria-label="email address" 
+    href="mailto:${upcutContactInfo.email}" 
+    class="mt-10 md:mt-16 block text-xl md:text-displaySmall font-bold">
+   ${upcutContactInfo.email}
     </a>
 
     <div class="flex items-center gap-6 md:gap-10 text-4xl md:text-[54px] mt-10 md:mt-16">
-    <span>
-    ${IconLinkedIn}</span>
-    <span>${IconInstagram}</span>
-    <span>${IconX}</span>
+    <a href="${upcutContactInfo.linkedin}" title="linkedIn" aria-label="linkedIn">
+    ${IconLinkedIn}</a>
+    <a href="${upcutContactInfo.instagram}" title="instagram" aria-label="instagram">${IconInstagram}</a>
+    <a href="${upcutContactInfo.x}" title="x" aria-label="x">${IconX}</a>
     </div>
     </article>
     </div>

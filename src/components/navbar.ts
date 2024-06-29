@@ -1,5 +1,5 @@
 import { LinkItem } from "../interface";
-import logo from '/logo.png'
+import logo from '/logo.svg'
 
 function mapLinks(links: LinkItem[]) {
     const currentUrl = window.location.pathname
